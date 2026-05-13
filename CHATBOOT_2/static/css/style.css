@@ -1,0 +1,137 @@
+/* static/css/style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fce4ec; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha ao topo para permitir margem */
+    min-height: 100vh;
+    margin: 0;
+}
+
+#chat-container {
+    width: 800px; /* Deixei bem largo conforme solicitado */
+    height: 85vh; /* Altura proporcional à tela */
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 40px; /* Espaço para não cortar no topo */
+}
+
+#header {
+    background: #ff80ab; 
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    /* O segredo da centralização com elementos nas pontas: */
+    justify-content: space-between; 
+    color: white;
+    position: relative; /* Para permitir o alinhamento absoluto se necessário */
+}
+
+#header img {
+    height: 50px;
+    z-index: 2; /* Garante que a logo fique acima do fundo */
+}
+
+#header span {
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute; /* Tira o texto do fluxo normal */
+    left: 50%;         /* Move para o meio da largura */
+    transform: translateX(-50%); /* Ajusta para o centro exato do próprio texto */
+    width: auto;
+    text-align: center;
+    white-space: nowrap; /* Impede que o título quebre linha */
+}
+
+#cpf-area {
+    padding: 20px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#mensagens {
+    flex: 1;
+    overflow-y: auto;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fffafb;
+}
+
+.bot-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    align-self: flex-start;
+}
+
+.bot-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff80ab; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.bubble {
+    max-width: 70%;
+    padding: 14px 18px;
+    border-radius: 18px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.bot {
+    background: #f1f1f1;
+    color: #333;
+    border-bottom-left-radius: 2px;
+}
+
+.user {
+    background: #ff80ab;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+#input-area {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    background: #f06292;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ec407a;
+}
